@@ -14,8 +14,8 @@ use 5.001;
 
 
 use vars qw($VERSION $DATE);
-$VERSION = '0.01';
-$DATE = '2004/05/09';
+$VERSION = '0.02';
+$DATE = '2004/05/13';
 
 use Data::Startup;
 
@@ -34,14 +34,14 @@ sub new
 {
    my $class = shift;
    $class = ref($class) if ref($class);
-   my $self = {};
-   $self->{'Tie::Form'} = Data::Startup->new(
+   my $self = Data::Startup->new(
        EON => ":",        # end of name
        EOD => "^",        # end of data
        EOR => "\~-\~",  # record separator
        strict => 0,
    );
-   $self->{'Tie::Form'} = $self->{'Tie::Form'}->Data::Startup::override(@_);
+   $self = $self->Data::Startup::override(@_);
+   bless $self,$class;
 }
 
 
@@ -514,7 +514,7 @@ vision but also for poor computation performance.
 
 =back
 
-The L<DataPorty::FileType::FormDB|DataPorty::FileType::FormDB>
+The Tie::Form program module
 solution is to use separators of the following form:
 
  (not_the_char) . (char) . (not_the_char)
@@ -816,17 +816,6 @@ characters differently for text files.
 
 =back
 
-The options are established as follows:
-
- $tdb = new Tie::Form new ($flag, $file, {binary=>1, strict=>1})
-
-The new method is inherited from 
-L<DataPort::DataFile|DataPort::DataFile>.
-The $tdb object passes the options hash
-reference to all $tdb methods as 
-
- $tdb->{options}
-
 The requirements for the methods are as follows:
 
 =over 4
@@ -928,12 +917,12 @@ Unless $tdb_in was created with the binary option, {binary => 1},
 the get_record subroutine shall[7] translate any "\015\012"
 combination into the "\n" for the current operating system.
 
-=item DataPort::DataFile
+=item Tie::Layers
 
 The methods inherit from
-L<DataPort::DataFile|DataPort::DataFile>
+L<Tie::Layers|Tie::Layers>
 will comply to the
-L<DataPort::DataFile requirements|DataPort::DataFile/REQUIREMENTS>
+L<Tie::Layers requirements|Tie::Layers/REQUIREMENTS>
 
 =back
 
@@ -1280,6 +1269,20 @@ this list of conditions and the following
 disclaimer in the documentation and/or
 other materials provided with the
 distribution.
+
+=item 3
+
+Commercial installation of the binary or source
+must visually present to the installer 
+the above copyright notice,
+this list of conditions intact,
+that the original source is available
+at http://softwarediamonds.com
+and provide means
+for the installer to actively accept
+the list of conditions; 
+otherwise, a license fee must be paid to
+Softwareware Diamonds.
 
 =back
 

@@ -10,29 +10,28 @@ use warnings;
 use warnings::register;
 
 use vars qw($VERSION $DATE $FILE );
-$VERSION = '0.01';
-$DATE = '2004/05/09';
+$VERSION = '0.02';
+$DATE = '2004/05/13';
 $FILE = __FILE__;
 
 use vars qw(%INVENTORY);
 %INVENTORY = (
-    'lib/Docs/Site_SVD/Tie_Form.pm' => [qw(0.01 2004/05/09), 'new'],
-    'MANIFEST' => [qw(0.01 2004/05/09), 'generated new'],
-    'Makefile.PL' => [qw(0.01 2004/05/09), 'generated new'],
-    'README' => [qw(0.01 2004/05/09), 'generated new'],
-    'lib/Tie/Form.pm' => [qw(0.01 2004/05/09), 'new'],
-    't/Tie/Form.d' => [qw(0.01 2004/05/09), 'new'],
-    't/Tie/Form.pm' => [qw(0.01 2004/05/09), 'new'],
-    't/Tie/Form.t' => [qw(0.01 2004/05/09), 'new'],
-    't/Tie/_Form_/lenient0.txt' => [qw(0.01 2004/05/09), 'new'],
-    't/Tie/_Form_/lenient2.txt' => [qw(0.01 2004/05/09), 'new'],
-    't/Tie/_Form_/strict0.txt' => [qw(0.01 2004/05/09), 'new'],
-    't/Tie/File/SmartNL.pm' => [qw(1.14 2004/05/09), 'new'],
-    't/Tie/File/Package.pm' => [qw(1.16 2004/05/09), 'new'],
-    't/Tie/Test/Tech.pm' => [qw(1.22 2004/05/09), 'new'],
-    't/Tie/Data/Secs2.pm' => [qw(1.19 2004/05/09), 'new'],
-    't/Tie/Data/SecsPack.pm' => [qw(0.04 2004/05/09), 'new'],
-    't/Tie/Data/Startup.pm' => [qw(0.04 2004/05/09), 'new'],
+    'lib/Docs/Site_SVD/Tie_Form.pm' => [qw(0.02 2004/05/13), 'revised 0.01'],
+    'MANIFEST' => [qw(0.02 2004/05/13), 'generated, replaces 0.01'],
+    'Makefile.PL' => [qw(0.02 2004/05/13), 'generated, replaces 0.01'],
+    'README' => [qw(0.02 2004/05/13), 'generated, replaces 0.01'],
+    'lib/Tie/Form.pm' => [qw(0.02 2004/05/13), 'revised 0.01'],
+    't/Tie/Form.d' => [qw(0.01 2004/05/09), 'unchanged'],
+    't/Tie/Form.pm' => [qw(0.01 2004/05/09), 'unchanged'],
+    't/Tie/Form.t' => [qw(0.02 2004/05/13), 'revised 0.01'],
+    't/Tie/_Form_/lenient0.txt' => [qw(0.01 2004/05/09), 'unchanged'],
+    't/Tie/_Form_/lenient2.txt' => [qw(0.01 2004/05/09), 'unchanged'],
+    't/Tie/_Form_/strict0.txt' => [qw(0.01 2004/05/09), 'unchanged'],
+    't/Tie/File/SmartNL.pm' => [qw(1.16 2004/05/13), 'revised 1.14'],
+    't/Tie/File/Package.pm' => [qw(1.17 2004/05/13), 'revised 1.16'],
+    't/Tie/Test/Tech.pm' => [qw(1.25 2004/05/13), 'revised 1.22'],
+    't/Tie/Data/Secs2.pm' => [qw(1.23 2004/05/13), 'revised 1.19'],
+    't/Tie/Data/SecsPack.pm' => [qw(0.08 2004/05/13), 'revised 0.04'],
 
 );
 
@@ -51,19 +50,23 @@ use vars qw(%INVENTORY);
 
 
 
+=head1 NAME
+
+Docs::Site_SVD::Tie_Form - Text Database that mimics a Form
+
 =head1 Title Page
 
  Software Version Description
 
  for
 
- Tie::Form - Text Database that mimics a Form
+ Docs::Site_SVD::Tie_Form - Text Database that mimics a Form
 
  Revision: -
 
- Version: 0.01
+ Version: 0.02
 
- Date: 2004/05/09
+ Date: 2004/05/13
 
  Prepared for: General Public 
 
@@ -146,7 +149,7 @@ Perl or any other programming language to process.
 
 =head2 1.3 Document overview.
 
-This document releases Tie::Form version 0.01
+This document releases Tie::Form version 0.02
 providing description of the inventory, installation
 instructions and other information necessary to
 utilize and track this release.
@@ -161,7 +164,7 @@ system file specification.
 
 This document releases the file 
 
- Tie-Form-0.01.tar.gz
+ Tie-Form-0.02.tar.gz
 
 found at the following repository(s):
 
@@ -205,6 +208,21 @@ disclaimer in the documentation and/or
 other materials provided with the
 distribution.
 
+=item 3
+
+Commercial installation of the binary or source
+must visually present to the installer 
+the above copyright notice,
+this list of conditions intact,
+that the original source is available
+at http://softwarediamonds.com
+and provide means
+for the installer to actively accept
+the list of conditions; 
+otherwise, a license fee must be paid to
+Softwareware Diamonds.
+
+
 =back
 
 SOFTWARE DIAMONDS, http://www.SoftwareDiamonds.com,
@@ -233,23 +251,22 @@ consists of the following files:
 
  file                                                         version date       comment
  ------------------------------------------------------------ ------- ---------- ------------------------
- lib/Docs/Site_SVD/Tie_Form.pm                                0.01    2004/05/09 new
- MANIFEST                                                     0.01    2004/05/09 generated new
- Makefile.PL                                                  0.01    2004/05/09 generated new
- README                                                       0.01    2004/05/09 generated new
- lib/Tie/Form.pm                                              0.01    2004/05/09 new
- t/Tie/Form.d                                                 0.01    2004/05/09 new
- t/Tie/Form.pm                                                0.01    2004/05/09 new
- t/Tie/Form.t                                                 0.01    2004/05/09 new
- t/Tie/_Form_/lenient0.txt                                    0.01    2004/05/09 new
- t/Tie/_Form_/lenient2.txt                                    0.01    2004/05/09 new
- t/Tie/_Form_/strict0.txt                                     0.01    2004/05/09 new
- t/Tie/File/SmartNL.pm                                        1.14    2004/05/09 new
- t/Tie/File/Package.pm                                        1.16    2004/05/09 new
- t/Tie/Test/Tech.pm                                           1.22    2004/05/09 new
- t/Tie/Data/Secs2.pm                                          1.19    2004/05/09 new
- t/Tie/Data/SecsPack.pm                                       0.04    2004/05/09 new
- t/Tie/Data/Startup.pm                                        0.04    2004/05/09 new
+ lib/Docs/Site_SVD/Tie_Form.pm                                0.02    2004/05/13 revised 0.01
+ MANIFEST                                                     0.02    2004/05/13 generated, replaces 0.01
+ Makefile.PL                                                  0.02    2004/05/13 generated, replaces 0.01
+ README                                                       0.02    2004/05/13 generated, replaces 0.01
+ lib/Tie/Form.pm                                              0.02    2004/05/13 revised 0.01
+ t/Tie/Form.d                                                 0.01    2004/05/09 unchanged
+ t/Tie/Form.pm                                                0.01    2004/05/09 unchanged
+ t/Tie/Form.t                                                 0.02    2004/05/13 revised 0.01
+ t/Tie/_Form_/lenient0.txt                                    0.01    2004/05/09 unchanged
+ t/Tie/_Form_/lenient2.txt                                    0.01    2004/05/09 unchanged
+ t/Tie/_Form_/strict0.txt                                     0.01    2004/05/09 unchanged
+ t/Tie/File/SmartNL.pm                                        1.16    2004/05/13 revised 1.14
+ t/Tie/File/Package.pm                                        1.17    2004/05/13 revised 1.16
+ t/Tie/Test/Tech.pm                                           1.25    2004/05/13 revised 1.22
+ t/Tie/Data/Secs2.pm                                          1.23    2004/05/13 revised 1.19
+ t/Tie/Data/SecsPack.pm                                       0.08    2004/05/13 revised 0.04
 
 
 =head2 3.3 Changes
@@ -261,6 +278,11 @@ Changes to previous revisions are as follows:
 =item Tie::Form 0.01
 
 Originated
+
+=item Tie::Form 0.02
+
+The C<new> subroutine did not C<bless> with the
+input C<$class>. Fixed.
 
 =back
 
@@ -300,13 +322,13 @@ Enter one of the following repositories in a web browser:
   http://www.softwarediamonds/packages/
   http://www.perl.com/CPAN/authors/id/S/SO/SOFTDIA/
 
-Right click on 'Tie-Form-0.01.tar.gz' and download to a temporary
+Right click on 'Tie-Form-0.02.tar.gz' and download to a temporary
 installation directory.
 Enter the following where $make is 'nmake' for microsoft
 windows; otherwise 'make'.
 
- gunzip Tie-Form-0.01.tar.gz
- tar -xf Tie-Form-0.01.tar
+ gunzip Tie-Form-0.02.tar.gz
+ tar -xf Tie-Form-0.02.tar
  perl Makefile.PL
  $make test
  $make install
@@ -319,7 +341,8 @@ not install, download and install unxutils from
 
 =item Prerequistes.
 
- 'Tie::Layers' => '0.01'
+ 'Tie::Layers' => '0.01',
+ 'Data::Startup' => '0.02',
 
 
 =item Security, privacy, or safety precautions.
@@ -382,10 +405,10 @@ __DATA__
 DISTNAME: Tie-Form^
 REPOSITORY_DIR: packages^
 
-VERSION : 0.01^
+VERSION : 0.02^
 FREEZE: 1^
 PREVIOUS_DISTNAME:  ^
-PREVIOUS_RELEASE:  ^
+PREVIOUS_RELEASE: 0.01^
 REVISION: - ^
 
 AUTHOR  : SoftwareDiamonds.com E<lt> support@SoftwareDiamonds.comE <gt>^
@@ -395,7 +418,7 @@ appear in the data. The text file resembles mimics hard copy
 forms. There is a very liberal acceptance of separation sequences.
 ^
 
-TITLE   : Tie::Form - Text Database that mimics a Form^
+TITLE   : Docs::Site_SVD::Tie_Form - Text Database that mimics a Form^
 END_USER: General Public^
 COPYRIGHT: copyright © 2003 Software Diamonds^
 CLASSIFICATION: NONE^
@@ -423,10 +446,12 @@ lib/File/Package.pm => t/Tie/File/Package.pm
 lib/Test/Tech.pm => t/Tie/Test/Tech.pm
 lib/Data/Secs2.pm => t/Tie/Data/Secs2.pm
 lib/Data/SecsPack.pm => t/Tie/Data/SecsPack.pm
-lib/Data/Startup.pm => t/Tie/Data/Startup.pm
 ^
 
-PREREQ_PM: 'Tie::Layers' => '0.01'^
+PREREQ_PM: 
+'Tie::Layers' => '0.01',
+'Data::Startup' => '0.02',
+^
 README_PODS: lib/Tie/Form.pm^
 TESTS: t/Tie/Form.t ^
 EXE_FILES:  ^
@@ -439,6 +464,11 @@ Changes to previous revisions are as follows:
 \=item Tie::Form 0.01
 
 Originated
+
+\=item Tie::Form 0.02
+
+The C<new> subroutine did not C<bless> with the
+input C<$class>. Fixed.
 
 \=back
 ^
@@ -531,6 +561,21 @@ this list of conditions and the following
 disclaimer in the documentation and/or
 other materials provided with the
 distribution.
+
+\=item 3
+
+Commercial installation of the binary or source
+must visually present to the installer 
+the above copyright notice,
+this list of conditions intact,
+that the original source is available
+at http://softwarediamonds.com
+and provide means
+for the installer to actively accept
+the list of conditions; 
+otherwise, a license fee must be paid to
+Softwareware Diamonds.
+
 
 \=back
 
@@ -627,5 +672,9 @@ L<Tie::Form|Tie::Form>
 HTML: 
 ^
 ~-~
+
+
+
+
 
 

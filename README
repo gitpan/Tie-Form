@@ -95,7 +95,7 @@ DESCRIPTION
         unacceptable not only because it impairs vision but also for poor
         computation performance.
 
-    The DataPorty::FileType::FormDB solution is to use separators of the
+    The Tie::Form program module solution is to use separators of the
     following form:
 
      (not_the_char) . (char) . (not_the_char)
@@ -349,15 +349,6 @@ REQUIREMENTS
         and line feeds. Different operating systems handle these characters
         differently for text files.
 
-    The options are established as follows:
-
-     $tdb = new Tie::Form new ($flag, $file, {binary=>1, strict=>1})
-
-    The new method is inherited from DataPort::DataFile. The $tdb object
-    passes the options hash reference to all $tdb methods as
-
-     $tdb->{options}
-
     The requirements for the methods are as follows:
 
     methods [1] - encode_field
@@ -440,9 +431,9 @@ REQUIREMENTS
         the get_record subroutine shall[7] translate any "\015\012"
         combination into the "\n" for the current operating system.
 
-    DataPort::DataFile
-        The methods inherit from DataPort::DataFile will comply to the
-        DataPort::DataFile requirements
+    Tie::Layers
+        The methods inherit from Tie::Layers will comply to the Tie::Layers
+        requirements
 
 DEMONSTRATION
      #########
@@ -772,6 +763,13 @@ NOTES
         notice, this list of conditions and the following disclaimer in the
         documentation and/or other materials provided with the distribution.
 
+    3   Commercial installation of the binary or source must visually
+        present to the installer the above copyright notice, this list of
+        conditions intact, that the original source is available at
+        http://softwarediamonds.com and provide means for the installer to
+        actively accept the list of conditions; otherwise, a license fee
+        must be paid to Softwareware Diamonds.
+
     SOFTWARE DIAMONDS, http://www.SoftwareDiamonds.com, PROVIDES THIS
     SOFTWARE 'AS IS' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT
     NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
@@ -787,18 +785,21 @@ NOTES
 SEE ALSO
     the Tie::Layers manpage
 
+NAME
+    Docs::Site_SVD::Tie_Form - Text Database that mimics a Form
+
 Title Page
      Software Version Description
 
      for
 
-     Tie::Form - Text Database that mimics a Form
+     Docs::Site_SVD::Tie_Form - Text Database that mimics a Form
 
      Revision: -
 
-     Version: 0.01
+     Version: 0.02
 
-     Date: 2004/05/09
+     Date: 2004/05/13
 
      Prepared for: General Public 
 
@@ -872,7 +873,7 @@ Title Page
 
   1.3 Document overview.
 
-    This document releases Tie::Form version 0.01 providing description of
+    This document releases Tie::Form version 0.02 providing description of
     the inventory, installation instructions and other information necessary
     to utilize and track this release.
 
@@ -884,7 +885,7 @@ Title Page
 
     This document releases the file
 
-     Tie-Form-0.01.tar.gz
+     Tie-Form-0.02.tar.gz
 
     found at the following repository(s):
 
@@ -914,6 +915,13 @@ Title Page
             disclaimer in the documentation and/or other materials provided
             with the distribution.
 
+        3   Commercial installation of the binary or source must visually
+            present to the installer the above copyright notice, this list
+            of conditions intact, that the original source is available at
+            http://softwarediamonds.com and provide means for the installer
+            to actively accept the list of conditions; otherwise, a license
+            fee must be paid to Softwareware Diamonds.
+
         SOFTWARE DIAMONDS, http://www.SoftwareDiamonds.com, PROVIDES THIS
         SOFTWARE 'AS IS' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING,
         BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
@@ -934,23 +942,22 @@ Title Page
 
      file                                                         version date       comment
      ------------------------------------------------------------ ------- ---------- ------------------------
-     lib/Docs/Site_SVD/Tie_Form.pm                                0.01    2004/05/09 new
-     MANIFEST                                                     0.01    2004/05/09 generated new
-     Makefile.PL                                                  0.01    2004/05/09 generated new
-     README                                                       0.01    2004/05/09 generated new
-     lib/Tie/Form.pm                                              0.01    2004/05/09 new
-     t/Tie/Form.d                                                 0.01    2004/05/09 new
-     t/Tie/Form.pm                                                0.01    2004/05/09 new
-     t/Tie/Form.t                                                 0.01    2004/05/09 new
-     t/Tie/_Form_/lenient0.txt                                    0.01    2004/05/09 new
-     t/Tie/_Form_/lenient2.txt                                    0.01    2004/05/09 new
-     t/Tie/_Form_/strict0.txt                                     0.01    2004/05/09 new
-     t/Tie/File/SmartNL.pm                                        1.14    2004/05/09 new
-     t/Tie/File/Package.pm                                        1.16    2004/05/09 new
-     t/Tie/Test/Tech.pm                                           1.22    2004/05/09 new
-     t/Tie/Data/Secs2.pm                                          1.19    2004/05/09 new
-     t/Tie/Data/SecsPack.pm                                       0.04    2004/05/09 new
-     t/Tie/Data/Startup.pm                                        0.04    2004/05/09 new
+     lib/Docs/Site_SVD/Tie_Form.pm                                0.02    2004/05/13 revised 0.01
+     MANIFEST                                                     0.02    2004/05/13 generated, replaces 0.01
+     Makefile.PL                                                  0.02    2004/05/13 generated, replaces 0.01
+     README                                                       0.02    2004/05/13 generated, replaces 0.01
+     lib/Tie/Form.pm                                              0.02    2004/05/13 revised 0.01
+     t/Tie/Form.d                                                 0.01    2004/05/09 unchanged
+     t/Tie/Form.pm                                                0.01    2004/05/09 unchanged
+     t/Tie/Form.t                                                 0.02    2004/05/13 revised 0.01
+     t/Tie/_Form_/lenient0.txt                                    0.01    2004/05/09 unchanged
+     t/Tie/_Form_/lenient2.txt                                    0.01    2004/05/09 unchanged
+     t/Tie/_Form_/strict0.txt                                     0.01    2004/05/09 unchanged
+     t/Tie/File/SmartNL.pm                                        1.16    2004/05/13 revised 1.14
+     t/Tie/File/Package.pm                                        1.17    2004/05/13 revised 1.16
+     t/Tie/Test/Tech.pm                                           1.25    2004/05/13 revised 1.22
+     t/Tie/Data/Secs2.pm                                          1.23    2004/05/13 revised 1.19
+     t/Tie/Data/SecsPack.pm                                       0.08    2004/05/13 revised 0.04
 
   3.3 Changes
 
@@ -958,6 +965,9 @@ Title Page
 
     Tie::Form 0.01
         Originated
+
+    Tie::Form 0.02
+        The "new" subroutine did not "bless" with the input "$class". Fixed.
 
   3.4 Adaptation data.
 
@@ -991,12 +1001,12 @@ Title Page
           http://www.softwarediamonds/packages/
           http://www.perl.com/CPAN/authors/id/S/SO/SOFTDIA/
 
-        Right click on 'Tie-Form-0.01.tar.gz' and download to a temporary
+        Right click on 'Tie-Form-0.02.tar.gz' and download to a temporary
         installation directory. Enter the following where $make is 'nmake'
         for microsoft windows; otherwise 'make'.
 
-         gunzip Tie-Form-0.01.tar.gz
-         tar -xf Tie-Form-0.01.tar
+         gunzip Tie-Form-0.02.tar.gz
+         tar -xf Tie-Form-0.02.tar
          perl Makefile.PL
          $make test
          $make install
@@ -1008,7 +1018,8 @@ Title Page
          http://packages.softwarediamonds.com
 
     Prerequistes.
-         'Tie::Layers' => '0.01'
+         'Tie::Layers' => '0.01',
+         'Data::Startup' => '0.02',
 
     Security, privacy, or safety precautions.
         None.

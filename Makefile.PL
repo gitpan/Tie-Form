@@ -23,11 +23,12 @@ my $tests = join ' ',unix2os('t/Tie/Form.t');
 WriteMakefile(
     NAME => 'Tie::Form',
     DISTNAME => 'Tie-Form',
-    VERSION  => '0.01',
+    VERSION  => '0.02',
     dist     => {COMPRESS => 'gzip',
                 'gz' => 'gz'},
     test     => {TESTS => $tests},
-    PREREQ_PM => {'Tie::Layers' => '0.01'},
+    PREREQ_PM => {'Tie::Layers' => '0.01',
+                  'Data::Startup' => '0.02',},
     
 
     ($] >= 5.005 ?     
